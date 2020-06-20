@@ -55,6 +55,20 @@ workoutSchema.virtual("totalDuration").get(function () {
   }, 0);
 });
 
+workoutSchema.virtual("totalWeights").get(function () {
+  // "reduce" array of exercises down to just the sum of their durations
+  return this.exercises.reduce((total, exercise) => {
+    return total + ((exercise.weight) ? exercise.weight : 0);
+  }, 0);
+});
+
+workoutSchema.virtual("totalRun").get(function () {
+  // "reduce" array of exercises down to just the sum of their durations
+  return this.exercises.reduce((total, exercise) => {
+    return total + ((exercise.distance) ? exercise.distance : 0); 
+  }, 0);
+});
+
 const Workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = Workout;
