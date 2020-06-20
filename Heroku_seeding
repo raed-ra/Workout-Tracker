@@ -1,0 +1,1 @@
+mongo ds145895.mlab.com:45895/heroku_hjqt6n2d -u heroku_hjqt6n2d -p cgjttqmhmb6a33j0hqs2sj9lml seeders/seed.js
