@@ -170,7 +170,7 @@ function populateChart(data) {
     options: {
       title: {
         display: true,
-        text: "Pounds Lifted"
+        text: "Distance ran"
       },
       scales: {
         yAxes: [
